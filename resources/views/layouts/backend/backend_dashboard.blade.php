@@ -99,13 +99,15 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link {{ Route::is('backend_members') ? 'active' : '' }}"
+                                href="{{ url(route('backend_members')) }}">
                                 <i class="material-icons">people</i>
                                 <span>Anggota</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link {{ Route::is('backend_records') ? 'active' : '' }}"
+                                href="{{ url(route('backend_records')) }}">
                                 <i class="material-icons">description</i>
                                 <span>Peminjaman</span>
                             </a>
