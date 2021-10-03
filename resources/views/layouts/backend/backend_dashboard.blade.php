@@ -85,19 +85,35 @@
                 <div class="nav-wrapper">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link {{ Route::is('backend_dashboard') ? 'active' : '' }}" href="{{ url(route('backend_dashboard')) }}">
+                            <a class="nav-link {{ Route::is('backend_dashboard') ? 'active' : '' }}"
+                                href="{{ url(route('backend_dashboard')) }}">
                                 <i class="material-icons">dashboard</i>
                                 <span>Dashboard</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{ Route::is('backend_books') ? 'active' : '' }}" href="{{ url(route('backend_books')) }}">
+                            <a class="nav-link {{ Route::is('backend_books') ? 'active' : '' }}"
+                                href="{{ url(route('backend_books')) }}">
                                 <i class="material-icons">library_books</i>
-                                <span>Books</span>
+                                <span>Buku</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                                href="#">
+                                <i class="material-icons">people</i>
+                                <span>Anggota</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                                href="#">
+                                <i class="material-icons">description</i>
+                                <span>Peminjaman</span>
                             </a>
                         </li>
 
-            {{-- <li class="nav-item">
+                        {{-- <li class="nav-item">
                 <a class="nav-link " href="add-new-post.html">
                   <i class="material-icons">note_add</i>
                   <span>Add New Post</span>
@@ -147,8 +163,8 @@
                                     placeholder="Search for something..." aria-label="Search">
                             </div>
                         </form>
-                        <ul class="navbar-nav border-left flex-row ">
-                            {{-- <li class="nav-item border-right dropdown notifications">
+                        {{-- <ul class="navbar-nav border-left flex-row ">
+                            <li class="nav-item border-right dropdown notifications">
                   <a class="nav-link nav-link-icon text-center" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="nav-link-icon__wrapper">
                       <i class="material-icons">&#xE7F4;</i>
@@ -180,8 +196,8 @@
                     </a>
                     <a class="dropdown-item notification__all text-center" href="#"> View all Notifications </a>
                   </div>
-                </li> --}}
-                            {{-- <li class="nav-item dropdown">
+                </li>
+                            <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle text-nowrap px-3" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                     <img class="user-avatar rounded-circle mr-2" src="images/avatars/0.jpg" alt="User Avatar"> <span class="d-none d-md-inline-block">Sierra Brooks</span>
                   </a>
@@ -193,8 +209,8 @@
                     <a class="dropdown-item text-danger" href="#">
                       <i class="material-icons text-danger">&#xE879;</i> Logout </a>
                   </div>
-                </li> --}}
-                        </ul>
+                </li>
+                        </ul> --}}
                         <nav class="nav">
                             <a href="#"
                                 class="nav-link nav-link-icon toggle-sidebar d-md-inline d-lg-none text-center border-left"
@@ -210,7 +226,7 @@
                     <div class="page-header row no-gutters py-4">
                         <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
                             <span class="text-uppercase page-subtitle">Dashboard</span>
-                            <h3 class="page-title">Blog Overview</h3>
+                            <h3 class="page-title">Database Overview</h3>
                         </div>
                     </div>
                     <!-- End Page Header -->
@@ -221,15 +237,14 @@
                                 <div class="card-body p-0 d-flex">
                                     <div class="d-flex flex-column m-auto">
                                         <div class="stats-small__data text-center">
-                                            <span class="stats-small__label text-uppercase">Posts</span>
-                                            <h6 class="stats-small__value count my-3">2,390</h6>
+                                            <span class="stats-small__label text-uppercase">Buku</span>
+                                            <h6 class="stats-small__value count my-3">190</h6>
                                         </div>
                                         {{-- <div class="stats-small__data">
                                             <span
                                                 class="stats-small__percentage stats-small__percentage--increase">4.7%</span>
                                         </div> --}}
                                     </div>
-                                    <canvas height="120" class="blog-overview-stats-small-1"></canvas>
                                 </div>
                             </div>
                         </div>
@@ -238,20 +253,35 @@
                                 <div class="card-body p-0 d-flex">
                                     <div class="d-flex flex-column m-auto">
                                         <div class="stats-small__data text-center">
-                                            <span class="stats-small__label text-uppercase">Pages</span>
-                                            <h6 class="stats-small__value count my-3">182</h6>
+                                            <span class="stats-small__label text-uppercase">Anggota</span>
+                                            <h6 class="stats-small__value count my-3">53</h6>
                                         </div>
                                         {{-- <div class="stats-small__data">
                                             <span
                                                 class="stats-small__percentage stats-small__percentage--increase">12.4%</span>
                                         </div> --}}
                                     </div>
-                                    <canvas height="120" class="blog-overview-stats-small-2"></canvas>
                                 </div>
                             </div>
                         </div>
-                    <!-- End Small Stats Blocks -->
-                    {{-- <div class="row">
+                        <div class="col-lg col-md-6 col-sm-6 mb-4">
+                            <div class="stats-small stats-small--1 card card-small">
+                                <div class="card-body p-0 d-flex">
+                                    <div class="d-flex flex-column m-auto">
+                                        <div class="stats-small__data text-center">
+                                            <span class="stats-small__label text-uppercase">Peminjaman</span>
+                                            <h6 class="stats-small__value count my-3">60</h6>
+                                        </div>
+                                        {{-- <div class="stats-small__data">
+                                            <span
+                                                class="stats-small__percentage stats-small__percentage--increase">12.4%</span>
+                                        </div> --}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Small Stats Blocks -->
+                        {{-- <div class="row">
                         <!-- Users Stats -->
                         <div class="col-lg-8 col-md-12 col-sm-12 mb-4">
                             <div class="card card-small">
@@ -316,28 +346,28 @@
                         <!-- End Users By Device Stats -->
 
                     </div> --}}
-                </div>
-                <footer class="main-footer d-flex p-2 px-3 bg-white border-top">
-                    <ul class="nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Products</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Blog</a>
-                        </li>
-                    </ul>
-                    <span class="copyright ml-auto my-auto mr-2">Copyright © 2021 - Tri Madya based on <a href="https://designrevision.com"
-                            rel="nofollow">DesignRevision</a></span>
-                </footer>
+                    </div>
+                    <footer class="main-footer d-flex p-2 px-3 bg-white border-top">
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Blog</a>
+                            </li>
+                        </ul>
+                        <span class="copyright ml-auto my-auto mr-2">Copyright © 2021 - Tri Madya based on <a
+                                href="https://designrevision.com" rel="nofollow">DesignRevision</a></span>
+                    </footer>
             </main>
         </div>
     </div>
