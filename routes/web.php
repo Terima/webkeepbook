@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\MemberController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {return view('frontend.dashboard');})->name('frontend_dashboard');
 
 // BackEnd View
-Route::get('/dashboard', function() {return view('backend.dashboard');})->name('backend_dashboard');
+Route::get('/dashboard', [DashboardController::class, 'counter'])->name('backend_dashboard');
 Route::get('/books', [BookController::class, 'backend_index'])->name('backend_books');
-Route::get('/members', function () {return view('backend.members');})->name('backend_members');
+Route::get('/members', [MemberController::class, 'index'])->name('backend_members');
 Route::get('/records', function () {return view('backend.records');})->name('backend_records');

@@ -10,7 +10,7 @@
                     <div class="d-flex flex-column m-auto">
                         <div class="stats-small__data text-center">
                             <span class="stats-small__label text-uppercase">Buku</span>
-                            <h6 class="stats-small__value count my-3">190</h6>
+                            <h6 class="stats-small__value count my-3">{{$bookcount}}</h6>
                         </div>
                         {{-- <div class="stats-small__data">
                                 <span
@@ -26,7 +26,7 @@
                     <div class="d-flex flex-column m-auto">
                         <div class="stats-small__data text-center">
                             <span class="stats-small__label text-uppercase">Anggota</span>
-                            <h6 class="stats-small__value count my-3">53</h6>
+                            <h6 class="stats-small__value count my-3">{{$membercount}}</h6>
                         </div>
                         {{-- <div class="stats-small__data">
                                 <span
@@ -42,7 +42,7 @@
                     <div class="d-flex flex-column m-auto">
                         <div class="stats-small__data text-center">
                             <span class="stats-small__label text-uppercase">Peminjaman</span>
-                            <h6 class="stats-small__value count my-3">60</h6>
+                            <h6 class="stats-small__value count my-3">{{$recordcount}}</h6>
                         </div>
                         {{-- <div class="stats-small__data">
                                 <span
