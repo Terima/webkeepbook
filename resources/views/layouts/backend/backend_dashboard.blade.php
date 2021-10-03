@@ -99,15 +99,13 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link"
-                                href="#">
+                            <a class="nav-link" href="#">
                                 <i class="material-icons">people</i>
                                 <span>Anggota</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link"
-                                href="#">
+                            <a class="nav-link" href="#">
                                 <i class="material-icons">description</i>
                                 <span>Peminjaman</span>
                             </a>
@@ -226,127 +224,13 @@
                     <div class="page-header row no-gutters py-4">
                         <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
                             <span class="text-uppercase page-subtitle">Dashboard</span>
-                            <h3 class="page-title">Database Overview</h3>
+                            <h3 class="page-title">@yield('dashboard_header')</h3>
                         </div>
                     </div>
                     <!-- End Page Header -->
-                    <!-- Small Stats Blocks -->
-                    <div class="row">
-                        <div class="col-lg col-md-6 col-sm-6 mb-4">
-                            <div class="stats-small stats-small--1 card card-small">
-                                <div class="card-body p-0 d-flex">
-                                    <div class="d-flex flex-column m-auto">
-                                        <div class="stats-small__data text-center">
-                                            <span class="stats-small__label text-uppercase">Buku</span>
-                                            <h6 class="stats-small__value count my-3">190</h6>
-                                        </div>
-                                        {{-- <div class="stats-small__data">
-                                            <span
-                                                class="stats-small__percentage stats-small__percentage--increase">4.7%</span>
-                                        </div> --}}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg col-md-6 col-sm-6 mb-4">
-                            <div class="stats-small stats-small--1 card card-small">
-                                <div class="card-body p-0 d-flex">
-                                    <div class="d-flex flex-column m-auto">
-                                        <div class="stats-small__data text-center">
-                                            <span class="stats-small__label text-uppercase">Anggota</span>
-                                            <h6 class="stats-small__value count my-3">53</h6>
-                                        </div>
-                                        {{-- <div class="stats-small__data">
-                                            <span
-                                                class="stats-small__percentage stats-small__percentage--increase">12.4%</span>
-                                        </div> --}}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg col-md-6 col-sm-6 mb-4">
-                            <div class="stats-small stats-small--1 card card-small">
-                                <div class="card-body p-0 d-flex">
-                                    <div class="d-flex flex-column m-auto">
-                                        <div class="stats-small__data text-center">
-                                            <span class="stats-small__label text-uppercase">Peminjaman</span>
-                                            <h6 class="stats-small__value count my-3">60</h6>
-                                        </div>
-                                        {{-- <div class="stats-small__data">
-                                            <span
-                                                class="stats-small__percentage stats-small__percentage--increase">12.4%</span>
-                                        </div> --}}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Small Stats Blocks -->
-                        {{-- <div class="row">
-                        <!-- Users Stats -->
-                        <div class="col-lg-8 col-md-12 col-sm-12 mb-4">
-                            <div class="card card-small">
-                                <div class="card-header border-bottom">
-                                    <h6 class="m-0">Users</h6>
-                                </div>
-                                <div class="card-body pt-0">
-                                    <div class="row border-bottom py-2 bg-light">
-                                        <div class="col-12 col-sm-6">
-                                            <div id="blog-overview-date-range"
-                                                class="input-daterange input-group input-group-sm my-auto ml-auto mr-auto ml-sm-auto mr-sm-0"
-                                                style="max-width: 350px;">
-                                                <input type="text" class="input-sm form-control" name="start"
-                                                    placeholder="Start Date" id="blog-overview-date-range-1">
-                                                <input type="text" class="input-sm form-control" name="end"
-                                                    placeholder="End Date" id="blog-overview-date-range-2">
-                                                <span class="input-group-append">
-                                                    <span class="input-group-text">
-                                                        <i class="material-icons"></i>
-                                                    </span>
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 d-flex mb-2 mb-sm-0">
-                                            <button type="button"
-                                                class="btn btn-sm btn-white ml-auto mr-auto ml-sm-auto mr-sm-0 mt-3 mt-sm-0">View
-                                                Full Report &rarr;</button>
-                                        </div>
-                                    </div>
-                                    <canvas height="130" style="max-width: 100% !important;"
-                                        class="blog-overview-users"></canvas>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Users Stats -->
-                        <!-- Users By Device Stats -->
-                        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                            <div class="card card-small h-100">
-                                <div class="card-header border-bottom">
-                                    <h6 class="m-0">Users by device</h6>
-                                </div>
-                                <div class="card-body d-flex py-0">
-                                    <canvas height="220" class="blog-users-by-device m-auto"></canvas>
-                                </div>
-                                <div class="card-footer border-top">
-                                    <div class="row">
-                                        <div class="col">
-                                            <select class="custom-select custom-select-sm" style="max-width: 130px;">
-                                                <option selected>Last Week</option>
-                                                <option value="1">Today</option>
-                                                <option value="2">Last Month</option>
-                                                <option value="3">Last Year</option>
-                                            </select>
-                                        </div>
-                                        <div class="col text-right view-report">
-                                            <a href="#">Full report &rarr;</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Users By Device Stats -->
 
-                    </div> --}}
-                    </div>
+                    @yield('content')
+
                     <footer class="main-footer d-flex p-2 px-3 bg-white border-top">
                         <ul class="nav">
                             <li class="nav-item">
@@ -368,6 +252,7 @@
                         <span class="copyright ml-auto my-auto mr-2">Copyright © 2021 - Tri Madya based on <a
                                 href="https://designrevision.com" rel="nofollow">DesignRevision</a></span>
                     </footer>
+                </div>
             </main>
         </div>
     </div>
