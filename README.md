@@ -1,12 +1,12 @@
-
 # KeepBook DummyWebSite
 ## Pengantar
 Sebuah situs fiktif peminjaman buku secara online.
 Dibuat dan dijalankan untuk pembelajaran menggunakan:
-**- [Laravel 8][1]**
-**- [PHP 7.4.19][2]**
-**- [Bootstrap 4/5][3]**
-**- [Shards UI Toolkit][4]** *(di beberapa halaman)*
+
+ - **[Laravel 8][1]**
+ - **[PHP 7.4.19][2]**
+ - **[Bootstrap 4/5][3]**
+ - **[Shards UI Toolkit][4]** *(di beberapa halaman)*
 
 ## Instalasi Singkat
 Berikut adalah beberapa langkah singkat yang saya lakukan dan mungkin bisa dijadikan referensi untuk membuat web serupa.
@@ -29,6 +29,5 @@ Setelah itu, masukkan url yang tampil pada command prompt untuk mengakses web An
 [1]: https://laravel.com "Laravel"
 [2]: https://www.php.net "PHP"
 [3]: https://getbootstrap.com "Bootstrap"
-[4]: https://designrevision.com/docs/shards/ "Shard"
+[4]:https://designrevision.com/docs/shards/ "Shard"
 [5]: https://getcomposer.org "Composer"
-
