@@ -1,19 +1,15 @@
-#KeepBook DummyWebSite
-##Pengantar
+# KeepBook DummyWebSite
+## Pengantar
 Sebuah situs fiktif peminjaman buku secara online.
 Dibuat dan dijalankan untuk pembelajaran menggunakan:
-**- [Laravel 8][1] **
-**- [PHP 7.4.19][2] **
+**- [Laravel 8][1]**
+**- [PHP 7.4.19][2]**
 **- [Bootstrap 4/5][3]**
 **- [Shards UI Toolkit][4]** *(di beberapa halaman)*
 
-##Daftar Isi
-
-[TOC]
-
-##Instalasi Singkat
+## Instalasi Singkat
 Berikut adalah beberapa langkah singkat yang saya lakukan dan mungkin bisa dijadikan referensi untuk membuat web serupa.
-###Instalasi Laravel
+### Instalasi Laravel
 Untuk instalasi Laravel, saya menggunakan [Composer][5] sesuai dengan dokumentasi Laravel. Jalankan command prompt di direktori tujuan (tempat ingin membuat web). Di sini saya menggunakan **webkeepbook** sebagai nama projek web saya.
 
     composer create-project laravel/laravel webkeepbook
