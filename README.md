@@ -1,3 +1,4 @@
+
 # KeepBook DummyWebSite
 ## Pengantar
 Sebuah situs fiktif peminjaman buku secara online.
@@ -28,5 +29,6 @@ Setelah itu, masukkan url yang tampil pada command prompt untuk mengakses web An
 [1]: https://laravel.com "Laravel"
 [2]: https://www.php.net "PHP"
 [3]: https://getbootstrap.com "Bootstrap"
-[4]:https://designrevision.com/docs/shards/ "Shard"
+[4]: https://designrevision.com/docs/shards/ "Shard"
 [5]: https://getcomposer.org "Composer"
+
