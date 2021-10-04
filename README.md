@@ -29,5 +29,5 @@ Setelah itu, akses url yang tampil pada command prompt untuk mengakses web Anda.
 [1]: https://laravel.com "Laravel"
 [2]: https://www.php.net "PHP"
 [3]: https://getbootstrap.com "Bootstrap"
-[4]:https://designrevision.com/docs/shards/ "Shard"
+[4]: https://designrevision.com/docs/shards/ "Shard"
 [5]: https://getcomposer.org "Composer"
