@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\BorrowRecord;
 use Illuminate\Http\Request;
 
 class BorrowRecordController extends Controller
@@ -11,9 +12,10 @@ class BorrowRecordController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function backend_index()
     {
-        //
+        $borrowrecords = BorrowRecord::all();
+        return view('backend.records', ['borrowrecords' => $borrowrecords]);
     }
 
     /**

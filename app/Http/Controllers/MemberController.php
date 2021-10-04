@@ -12,7 +12,7 @@ class MemberController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function backend_index()
     {
         $members = Member::all();
         return view('backend.members', ['members' => $members]);
