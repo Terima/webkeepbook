@@ -22,7 +22,7 @@ Setelah selesai, jalankan command berikut untuk pindah ke direktori web yang tad
     cd webkeepbook
     php artisan serve
 
-Setelah itu, masukkan url yang tampil pada command prompt untuk mengakses web Anda.
+Setelah itu, akses url yang tampil pada command prompt untuk mengakses web Anda.
 
 ----------------------------Under Construction----------------------------
 
