@@ -1,30 +1,34 @@
 # KeepBook DummyWebSite
 ## Pengantar
 Sebuah situs fiktif peminjaman buku secara online.
-Dibuat dan dijalankan untuk pembelajaran menggunakan:
-
- - **[Laravel 8][1]**
- - **[PHP 7.4.19][2]**
- - **[Bootstrap 4/5][3]**
- - **[Shards UI Toolkit][4]** *(di beberapa halaman)*
+Dibuat dan dijalankan untuk pembelajaran menggunakan [Laravel 8][1]
 
 ## Instalasi Singkat
-Berikut adalah beberapa langkah singkat yang saya lakukan dan mungkin bisa dijadikan referensi untuk membuat web serupa.
-### Instalasi Laravel
-Untuk instalasi Laravel, saya menggunakan [Composer][5] sesuai dengan dokumentasi Laravel. Jalankan command prompt di direktori tujuan (tempat ingin membuat web). Di sini saya menggunakan **webkeepbook** sebagai nama projek web saya.
+Berikut adalah beberapa langkah singkat yang bisa dilakukan untuk menjalankan web ini di localhost Anda.
+1. Persiapkan tools berikut sebelum melakukan instalasi
+    - [PHP][2] >= 7.3
+    - [Composer][5]
+2. Clone repository ini dengan command berikut di GIT console:
+            
+        git clone git@github.com:Terima/webkeepbook.git webkeepbook
 
-    composer create-project laravel/laravel webkeepbook
+2. Buatlah database local dengan nama `keepbook`
+3. Buat file `.env` dari file `.env.example` dan sesuaikan dengan pengaturan database Anda
+4. Instal dependencies yang diperlukan PHP dengan menggunakan [Composer][5]. Jalankan command berikut:
 
-Composer akan mengunduh dan mengekstrak *dependency* yang diperlukan untuk Laravel secara otomatis hingga selesai.
+        composer install
+        
+5. Buat app key baru dengan command:
 
-Setelah selesai, jalankan command berikut untuk pindah ke direktori web yang tadi dibuat dan memulai Laravel di localhost (127.0.0.0)
+        php artisan key:generate
+        
+6. Persiapkan database yang akan digunakan dengan command:
 
-    cd webkeepbook
-    php artisan serve
+        php artisan migrate
 
-Setelah itu, akses url yang tampil pada command prompt untuk mengakses web Anda.
+7. Jalankan web menggunakan web server atau dengan command:
 
-----------------------------Under Construction----------------------------
+        php artisan serve
 
 [1]: https://laravel.com "Laravel"
 [2]: https://www.php.net "PHP"
