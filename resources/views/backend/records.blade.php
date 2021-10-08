@@ -8,8 +8,8 @@
             <thead class="thead-dark">
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">ID Member</th>
-                    <th scope="col">ID Buku</th>
+                    <th scope="col">Nama Member</th>
+                    <th scope="col">Nama Buku</th>
                     <th scope="col">Tanggal Pinjam</th>
                     <th scope="col">Tanggal Pengembalian</th>
                     <th scope="col">Status</th>
@@ -19,8 +19,8 @@
                 @foreach($borrowrecords as $key => $data)
                 <tr>
                     <td>{{$data->id}}</td>
-                    <td>{{$data->member_id}}</td>
-                    <td>{{$data->book_id}}</td>
+                    <td>{{$data->member->name}}</td>
+                    <td>{{$data->book->name}}</td>
                     <td>{{$data->borrow_date}}</td>
                     <td>{{$data->return_date}}</td>
                     <td>{{$data->status}}</td>

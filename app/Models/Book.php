@@ -11,6 +11,6 @@ class Book extends Model
 
     public function borrowrecords()
     {
-        return $this->belongsTo(BorrowRecord::class, 'id');
+        return $this->hasMany('App\BorrowRecord');
     }
 }

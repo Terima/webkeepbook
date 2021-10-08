@@ -11,11 +11,11 @@ class BorrowRecord extends Model
 
     public function member()
     {
-        return $this->hasMany(Member::class, 'id');
+        return $this->belongsTo('App\Models\Member');
     }
 
     public function book()
     {
-        return $this->hasMany(Book::class, 'id');
+        return $this->belongsTo('App\Models\Book');
     }
 }
