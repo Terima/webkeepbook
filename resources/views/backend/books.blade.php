@@ -25,7 +25,7 @@
                     <td>{{$data->pub_year}}</td>
                     <td>
                         <a href="#" class="btn btn-success p-1 m-1">
-                            <i class="material-icons">add_circle_outline</i> Tambah
+                            <i class="material-icons">add</i> Tambah
                         </a>
                         <a href="#" class="btn btn-info p-1 m-1">
                             <i class="material-icons">edit</i> Edit
