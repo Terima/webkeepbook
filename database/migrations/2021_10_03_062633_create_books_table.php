@@ -19,7 +19,6 @@ class CreateBooksTable extends Migration
             $table->string('author');
             $table->integer('pages');
             $table->year('pub_year');
-            $table->string('image_path');
             $table->timestamps();
         });
     }
