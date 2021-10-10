@@ -8,7 +8,7 @@
             <thead class="thead-dark">
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Nama</th>
+                    <th scope="col">Judul</th>
                     <th scope="col">Penulis</th>
                     <th scope="col">Halaman</th>
                     <th scope="col">Tahun</th>
@@ -19,7 +19,7 @@
                 @foreach($books as $key => $data)
                 <tr>
                     <td>{{$data->id}}</td>
-                    <td>{{$data->name}}</td>
+                    <td>{{$data->title}}</td>
                     <td>{{$data->author}}</td>
                     <td>{{$data->pages}}</td>
                     <td>{{$data->pub_year}}</td>
