@@ -85,28 +85,28 @@
                 <div class="nav-wrapper">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link {{ Route::is('backend_dashboard') ? 'active' : '' }}"
+                            <a class="nav-link {{ Request::is('dashboard') ? 'active' : '' }}"
                                 href="{{ url(route('backend_dashboard')) }}">
                                 <i class="material-icons">dashboard</i>
                                 <span>Dashboard</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{ Route::is('backend_books') ? 'active' : '' }}"
+                            <a class="nav-link {{ Request::is('*/books*') ? 'active' : '' }}"
                                 href="{{ url(route('backend_books')) }}">
                                 <i class="material-icons">library_books</i>
                                 <span>Buku</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{ Route::is('backend_members') ? 'active' : '' }}"
+                            <a class="nav-link {{ Request::is('*/members*') ? 'active' : '' }}"
                                 href="{{ url(route('backend_members')) }}">
                                 <i class="material-icons">people</i>
                                 <span>Anggota</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{ Route::is('backend_records') ? 'active' : '' }}"
+                            <a class="nav-link {{ Request::is('*/records*') ? 'active' : '' }}"
                                 href="{{ url(route('backend_records')) }}">
                                 <i class="material-icons">description</i>
                                 <span>Peminjaman</span>
