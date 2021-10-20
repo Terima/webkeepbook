@@ -16,20 +16,18 @@ class BookController extends Controller
     public function backend_index()
     {
         $books = Book::all();
-        return view('backend.books', ['books' => $books]);
+        return view('backend.books.index', ['books' => $books]);
     }
 
     public function insert()
     {
-        return view('backend.books_insert');
+        return view('backend.books.insert');
     }
 
     public function store(Request $request)
     {
-        $slug = Str::slug($request->title);
-
         $books = Book::create([
-            'slug' => $slug,
+            'slug' => Str::slug($request->title),
             'title' => $request->input('title'),
             'description'=> $request->input('description'),
             'author'=> $request->input('author'),
@@ -40,38 +38,6 @@ class BookController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    // /**
-    //  * Store a newly created resource in storage.
-    //  *
-    //  * @param  \Illuminate\Http\Request  $request
-    //  * @return \Illuminate\Http\Response
-    //  */
-    // public function store(Request $request)
-    // {
-    //     //
-    // }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
@@ -79,29 +45,29 @@ class BookController extends Controller
      */
     public function edit($id)
     {
-        //
+        $book = Book::where('id', '=', $id)->first();
+        return view('backend.books.edit', ['book' => $book]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
-        //
+        $book = Book::where('id', '=', $id)->first();
+        $update = [
+            'slug' => Str::slug($request->title),
+            'title' => $request->input('title'),
+            'description'=> $request->input('description'),
+            'author'=> $request->input('author'),
+            'pages'=> $request->input('pages'),
+            'pub_year'=> $request->input('pub_year')
+        ];
+        $book->update($update);
+        return redirect()->route('backend_books');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
+    public function delete($id)
     {
-        //
+        $book = Book::where('id', '=', $id)->first();
+        $book->delete();
+        return redirect()->route('backend_books');
     }
 }

@@ -27,5 +27,13 @@ Route::get('/dashboard/members', [MemberController::class, 'backend_index'])->na
 Route::get('/dashboard/records', [BorrowRecordController::class, 'backend_index'])->name('backend_records');
 
 // Books CRUD
+// Books Insert & Store
 Route::get('/dashboard/books/insert', [BookController::class, 'insert'])->name('insert_books');
 Route::post('/dashboard/books/store', [BookController::class, 'store'])->name('store_books');
+
+// Books Edit & Update
+Route::get('/dashboard/books/edit/{id}', [BookController::class, 'edit'])->name('edit_books');
+Route::patch('/dashboard/books/update/{id}', [BookController::class, 'update'])->name('update_books');
+
+// Books Delete
+Route::delete('/dashboard/books/delete/{id}', [BookController::class, 'delete'])->name('delete_books');
