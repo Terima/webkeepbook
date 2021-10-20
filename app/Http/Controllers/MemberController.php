@@ -15,7 +15,7 @@ class MemberController extends Controller
     public function backend_index()
     {
         $members = Member::all();
-        return view('backend.members', ['members' => $members]);
+        return view('backend.members.index', ['members' => $members]);
     }
 
     /**

@@ -15,7 +15,7 @@ class BorrowRecordController extends Controller
     public function backend_index()
     {
         $borrowrecords = BorrowRecord::all();
-        return view('backend.records', ['borrowrecords' => $borrowrecords]);
+        return view('backend.records.index', ['borrowrecords' => $borrowrecords]);
     }
 
     /**
