@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 // FrontEnd View
 Route::get('/', function () {return view('frontend.dashboard');})->name('frontend_dashboard');
+Route::get('/login', function () {return view('frontend.login');})->name('frontend_login');
 
 // BackEnd View
 Route::get('/dashboard', [DashboardController::class, 'counter'])->name('backend_dashboard');
