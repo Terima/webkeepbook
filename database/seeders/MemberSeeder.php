@@ -18,7 +18,7 @@ class MemberSeeder extends Seeder
         $faker = Faker::create();
         DB::table('members')->insert([
             'name' => $faker->name,
-            'address' => $faker->address,
+            'address' => $faker->streetAddress,
             'email' => $faker->email,
             'password' => $faker->password,
             'phone_number' => $faker->phoneNumber,
