@@ -11,7 +11,6 @@
             <thead class="thead-dark">
                 <tr>
                     <th scope="col">No</th>
-                    <th scope="col">Slug</th>
                     <th scope="col">Judul</th>
                     <th scope="col">Deskripsi</th>
                     <th scope="col">Penulis</th>
@@ -24,7 +23,6 @@
                 @foreach($books as $key => $book)
                 <tr>
                     <td>{{$key + 1}}</td>
-                    <td>{{$book->slug}}</td>
                     <td>{{$book->title}}</td>
                     <td>{{Str::of($book->description)->words(6)}}</td>
                     <td>{{$book->author}}</td>
