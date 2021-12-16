@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
+use Faker\Factory as Faker;
 
 class BookSeeder extends Seeder
 {
@@ -15,12 +16,15 @@ class BookSeeder extends Seeder
      */
     public function run()
     {
+        $faker = Faker::create();
+        $title = rtrim(ucwords($faker->realText(rand(10, 50))), '.');
         DB::table('books')->insert([
-            'name' => Str::random(10),
-            'author' => Str::random(10),
-            'pages' => rand(40, 300),
-            'pub_year' => rand(1930, 2020),
-            'image_path' => '/'.Str::random(rand(5, 10)).'.jpg',
+            'slug' => Str::slug($title),
+            'title' => $title,
+            'description' => $faker->paragraph,
+            'author' => $faker->name,
+            'pages' => rand(30, 300),
+            'pub_year' => rand(1930, 2021),
         ]);
     }
 }
