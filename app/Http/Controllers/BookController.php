@@ -55,10 +55,11 @@ class BookController extends Controller
         $update = [
             'slug' => Str::slug($request->title),
             'title' => $request->input('title'),
-            'description'=> $request->input('description'),
-            'author'=> $request->input('author'),
-            'pages'=> $request->input('pages'),
-            'pub_year'=> $request->input('pub_year')
+            'description' => $request->input('description'),
+            'author' => $request->input('author'),
+            'pages' => $request->input('pages'),
+            'pub_year' => $request->input('pub_year'),
+            'updated_at' => now()
         ];
         $book->update($update);
         return redirect()->route('backend_books');

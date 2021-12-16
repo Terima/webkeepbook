@@ -18,25 +18,22 @@ class MemberController extends Controller
         return view('backend.members.index', ['members' => $members]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function insert()
     {
-        //
+        return view('backend.members.insert');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        $members = Member::create([
+            'name' => $request->input('name'),
+            'address' => $request->input('address'),
+            'email'=> $request->input('email'),
+            'password'=> $request->input('password'),
+            'phone_number'=> $request->input('phone_number'),
+            'created_at'=> now()
+        ]);
+        return redirect()->route('backend_members');
     }
 
     /**
@@ -58,7 +55,8 @@ class MemberController extends Controller
      */
     public function edit($id)
     {
-        //
+        $member = Member::where('id', '=', $id)->first();
+        return view('backend.members.edit', ['member' => $member]);
     }
 
     /**
@@ -70,7 +68,17 @@ class MemberController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $member = Member::where('id', '=', $id)->first();
+        $update = [
+            'name' => $request->input('name'),
+            'address' => $request->input('address'),
+            'email'=> $request->input('email'),
+            'password'=> $request->input('password'),
+            'phone_number'=> $request->input('phone_number'),
+            'updated_at'=> now()
+        ];
+        $member->update($update);
+        return redirect()->route('backend_members');
     }
 
     /**
@@ -79,8 +87,10 @@ class MemberController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete($id)
     {
-        //
+        $member = Member::where('id', '=', $id)->first();
+        $member->delete();
+        return redirect()->route('backend_members');
     }
 }
