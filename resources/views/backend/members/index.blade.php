@@ -1,6 +1,6 @@
 @extends('layouts.backend.backend_dashboard')
 @section('title', 'Members')
-@section('dashboard_header', 'Member List')
+@section('dashboard_header', 'Daftar Anggota')
 @section('content')
 <div class="row">
     <div class="col-lg col-md-6 col-sm-6 mb-4">

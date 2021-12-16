@@ -1,6 +1,6 @@
 @extends('layouts.backend.backend_dashboard')
 @section('title', 'Records')
-@section('dashboard_header', 'Borrowing Records')
+@section('dashboard_header', 'Catatan Peminjaman')
 @section('content')
 <div class="row">
     <div class="col-lg col-md-6 col-sm-6 mb-4">
