@@ -25,6 +25,7 @@ class BookSeeder extends Seeder
             'author' => $faker->name,
             'pages' => rand(30, 300),
             'pub_year' => rand(1930, 2021),
+            'created_at' => $faker->dateTimeThisYear($max = 'now', $timezone = 'Asia/Makassar')
         ]);
     }
 }
