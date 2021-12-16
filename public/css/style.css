@@ -117,7 +117,7 @@ h1, h2, h3, h4, h5, h6 {
 # Navigation Menu
 --------------------------------------------------------------*/
 /**
-* Desktop Navigation 
+* Desktop Navigation
 */
 .navbar {
   padding: 0;
@@ -229,7 +229,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /**
-* Mobile Navigation 
+* Mobile Navigation
 */
 .mobile-nav-toggle {
   color: #fff;
@@ -322,9 +322,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------------------------------------------------
-# Hero Section
+# Beranda Section
 --------------------------------------------------------------*/
-#hero {
+#beranda {
   width: 100%;
   height: 100vh;
   background: url(../img/hero-bg.jpg) top center;
@@ -332,11 +332,11 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 @media (min-width: 1024px) {
-  #hero {
+  #beranda {
     background-attachment: fixed;
   }
 }
-#hero:before {
+#beranda:before {
   content: "";
   background: rgba(0, 0, 0, 0.6);
   position: absolute;
@@ -345,7 +345,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   right: 0;
 }
-#hero .hero-container {
+#beranda .beranda-container {
   position: absolute;
   bottom: 0;
   top: 0;
@@ -357,7 +357,7 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   text-align: center;
 }
-#hero h1 {
+#beranda h1 {
   margin: 30px 0 10px 0;
   font-size: 48px;
   font-weight: 700;
@@ -366,24 +366,24 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 @media (max-width: 768px) {
-  #hero h1 {
+  #beranda h1 {
     font-size: 28px;
     line-height: 36px;
   }
 }
-#hero h2 {
+#beranda h2 {
   color: #eee;
   margin-bottom: 50px;
   font-size: 24px;
 }
 @media (max-width: 768px) {
-  #hero h2 {
+  #beranda h2 {
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;
   }
 }
-#hero .btn-get-started {
+#beranda .btn-get-started {
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
   font-weight: 500;
@@ -397,7 +397,7 @@ h1, h2, h3, h4, h5, h6 {
   border: 2px solid #fff;
   color: #fff;
 }
-#hero .btn-get-started:hover {
+#beranda .btn-get-started:hover {
   background: #2dc997;
   border: 2px solid #2dc997;
 }
@@ -475,40 +475,40 @@ section {
 
 /* About Us Section
 --------------------------------*/
-#about {
+#terbaru {
   background: #fff;
   padding: 80px 0;
 }
-#about .about-container .background {
+#terbaru .terbaru-container .background {
   min-height: 300px;
   background: url(../img/about-img.jpg) center top no-repeat;
   margin-bottom: 10px;
 }
-#about .about-container .content {
+#terbaru .terbaru-container .content {
   background: #fff;
 }
-#about .about-container .title {
+#terbaru .terbaru-container .title {
   color: #333;
   font-weight: 700;
   font-size: 32px;
 }
 @media (max-width: 768px) {
-  #about .about-container .title {
+  #terbaru .terbaru-container .title {
     padding-top: 15px;
   }
 }
-#about .about-container p {
+#terbaru .terbaru-container p {
   line-height: 26px;
 }
-#about .about-container p:last-child {
+#terbaru .terbaru-container p:last-child {
   margin-bottom: 0;
 }
-#about .about-container .icon-box {
+#terbaru .terbaru-container .icon-box {
   background: #fff;
   background-size: cover;
   padding: 0 0 30px 0;
 }
-#about .about-container .icon-box .icon {
+#terbaru .terbaru-container .icon-box .icon {
   float: left;
   background: #fff;
   width: 64px;
@@ -521,22 +521,22 @@ section {
   border-radius: 50%;
   border: 2px solid #2dc997;
 }
-#about .about-container .icon-box .icon i {
+#terbaru .terbaru-container .icon-box .icon i {
   color: #2dc997;
   font-size: 24px;
   line-height: 0;
 }
-#about .about-container .icon-box .title {
+#terbaru .terbaru-container .icon-box .title {
   margin-left: 80px;
   font-weight: 500;
   margin-bottom: 5px;
   font-size: 18px;
   text-transform: uppercase;
 }
-#about .about-container .icon-box .title a {
+#terbaru .terbaru-container .icon-box .title a {
   color: #111;
 }
-#about .about-container .icon-box .description {
+#terbaru .terbaru-container .icon-box .description {
   margin-left: 80px;
   line-height: 24px;
   font-size: 14px;

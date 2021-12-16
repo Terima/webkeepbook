@@ -20,7 +20,7 @@
                 <tr>
                     <td>{{$data->id}}</td>
                     <td>{{$data->member->name}}</td>
-                    <td>{{$data->book->name}}</td>
+                    <td>{{$data->book->title}}</td>
                     <td>{{$data->borrow_date}}</td>
                     <td>{{$data->return_date}}</td>
                     <td>{{$data->status}}</td>

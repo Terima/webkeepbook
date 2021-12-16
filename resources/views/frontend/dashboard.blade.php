@@ -2,21 +2,21 @@
 @section('header')
 @section('content')
 <!-- ======= Hero Section ======= -->
-<section id="hero">
-    <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
+<section id="beranda">
+    <div class="beranda-container" data-aos="zoom-in" data-aos-delay="100">
         <h1>Selamat datang di KeepBook</h1>
-        <h2 class="mb-3">Tempat peminjaman buku terpercaya di Banjarmasin</h2>
-        <h6 class="text-white fst-italic fw-bold">"Pinjam di sini, tinggal ambil bukunya di borrow center kami."</h6>
-        <a href="#about" class="btn-get-started">Mulai</a>
+        <h2 class="mb-3">Tempat peminjaman buku secara praktis di Banjarmasin</h2>
+        <h6 class="text-white fst-italic fw-bold">"Pinjam di sini, tinggal ambil bukunya di pusat peminjaman kami."</h6>
+        <a href="#terbaru" class="btn-get-started">Mulai</a>
     </div>
 </section><!-- End Hero Section -->
 
 <main id="main">
 
     <!-- ======= About Section ======= -->
-    <section id="about">
+    <section id="terbaru">
         <div class="container" data-aos="fade-up">
-            <div class="row about-container">
+            <div class="row terbaru-container">
 
                 <div class="col-lg-6 content order-lg-1 order-2">
                     <h2 class="title">Few Words About Us</h2>

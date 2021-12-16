@@ -7,11 +7,10 @@
         <table class="table">
             <thead class="thead-dark">
                 <tr>
-                    <th scope="col">#</th>
+                    <th scope="col">ID</th>
                     <th scope="col">Nama</th>
                     <th scope="col">Alamat</th>
                     <th scope="col">Email</th>
-                    <th scope="col">Password</th>
                     <th scope="col">Nomor Telepon</th>
                 </tr>
             </thead>
@@ -20,10 +19,9 @@
                 <tr>
                     <td>{{$data->id}}</td>
                     <td>{{$data->name}}</td>
-                    <td>{{$data->address}}</td>
-                    <td>{{$data->email}}</td>
-                    <td>{{$data->password}}</td>
-                    <td>{{$data->phone_number}}</td>
+                    <td>{{Str::of($data->address)->words(3)}}</td>
+                    <td>{{Str::of($data->email)->limit(10, '***')}}</td>
+                    <td>{{Str::of($data->phone_number)->limit(6, '***')}}</td>
                 </tr>
                 @endforeach
             </tbody>

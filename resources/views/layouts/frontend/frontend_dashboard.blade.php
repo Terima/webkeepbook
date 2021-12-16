@@ -51,13 +51,13 @@
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-                    <li><a class="nav-link scrollto" href="#about">About</a></li>
-                    <li><a class="nav-link scrollto" href="#services">Services</a></li>
-                    <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
-                    <li><a class="nav-link scrollto" href="#team">Team</a></li>
-                    <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-                    <li><a class="nav-link" href="{{ url(route('frontend_login')) }}">Masuk / Daftar</a></li>
+                    <li><a class="nav-link scrollto {{ Request::is('/') || Request::is('/#beranda') ? 'active' : '' }}" href="{{url(route('frontend_dashboard'))}}{{Request::is('/') ? '/#beranda' : ''}}">Beranda</a></li>
+                    <li><a class="nav-link scrollto {{ Request::is('#terbaru') ? 'active' : '' }}" href="{{ url('/#terbaru') }}">Terbaru</a></li>
+                    <li><a class="nav-link scrollto {{ Request::is('#services') ? 'active' : '' }}" href="{{ url('/#services') }}">Services</a></li>
+                    <li><a class="nav-link scrollto {{ Request::is('#portfolio') ? 'active' : '' }}" href="{{ url('/#portfolio') }}">Portfolio</a></li>
+                    <li><a class="nav-link scrollto {{ Request::is('#team') ? 'active' : '' }}" href="{{ url('/#team') }}" href="#team">Team</a></li>
+                    <li><a class="nav-link scrollto {{ Request::is('#contact') ? 'active' : '' }}" href="{{ url('/#contact') }}" href="#contact">Contact</a></li>
+                    <li><a class="nav-link scrollto {{ Request::is('login') ? 'active' : '' }}" href="{{ url(route('frontend_login')) }}">Masuk / Daftar</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
@@ -79,7 +79,7 @@
 
         <div class="container">
             <div class="copyright">
-                &copy; Copyright <strong>Regna</strong>. All Rights Reserved
+                &copy; Copyright <strong>Regna</strong>. Developed by <a href="https://github.com/Terima">Tri Madya</a>. Rights Reserved
             </div>
             <div class="credits">
                 <!--
