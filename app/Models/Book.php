@@ -15,7 +15,9 @@ class Book extends Model
         'description',
         'author',
         'pages',
-        'pub_year'
+        'pub_year',
+        'created_at',
+        'updated_at'
     ];
 
     public function borrowrecords()
